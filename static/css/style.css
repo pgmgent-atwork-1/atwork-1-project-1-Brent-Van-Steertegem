@@ -1,0 +1,21 @@
+@font-face {
+    font-family: "ModReg";
+    src: url('fonts/Moderat_Regular.woff2') format('woff2'),
+        url('fonts/Moderat_Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "ModLight";
+    src: url('fonts/Moderat_Light.woff2') format('woff2'),
+        url('fonts/Moderat_Light.woff') format('woff');
+    font-weight: lighter;
+    font-style: normal;
+}
+
+html {
+    font-family: "ModReg", "ModLight", Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    font-style: normal;
+}
