@@ -1,11 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\fonts",
     "\\static",
-    "\\static\\css",
-    "\\static\\js"
+    "\\static\\img"
   ],
-  "SelectedNode": "\\static\\js\\code.js",
+  "SelectedNode": "\\static\\img\\.gitignore",
   "PreviewInSolutionExplorer": false
 }

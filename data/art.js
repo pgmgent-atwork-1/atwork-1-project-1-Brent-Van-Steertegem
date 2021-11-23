@@ -1,3 +1,7 @@
+const setup = () => {
+   
+}
+
 const ARTS = [
     {
         title: "Intro Arne Quinze as guest of honour at BRAFA '22",
@@ -9280,3 +9284,5 @@ const ARTS = [
         highlight: false
     }
 ];
+
+window.addEventListener("load", setup);
