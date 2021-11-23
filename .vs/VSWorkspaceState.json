@@ -1,9 +1,11 @@
 {
   "ExpandedNodes": [
     "",
-    "\\data",
-    "\\static"
+    "\\fonts",
+    "\\static",
+    "\\static\\css",
+    "\\static\\js"
   ],
-  "SelectedNode": "\\fonts",
+  "SelectedNode": "\\static\\js\\code.js",
   "PreviewInSolutionExplorer": false
 }
