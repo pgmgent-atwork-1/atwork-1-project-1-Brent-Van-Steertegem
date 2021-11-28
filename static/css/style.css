@@ -14,12 +14,82 @@
     font-style: normal;
 }
 
-html {
+body {
     font-family: "Mod", Arial, Helvetica, sans-serif;
-    font-weight: lighter;
+    font-weight: normal;
     font-style: normal;
+    font-size: 1.1rem;
+    width: 85rem;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+footer {
+
+}
+
+nav {
+    margin-top: 3%;
 }
 
 h1 {
-    font-weight: normal;
+    font-size: 2.65rem;
+    font-weight: bold;
+}
+
+p {
+    font-size: 1.75rem;
+}
+
+a {
+    color: black;
+}
+
+    a:hover {
+        color: dodgerblue;
+    }
+
+img {
+    height: inherit;
+    max-height: 155vh;
+    width: 100%
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    font-size: 1.6rem;
+    line-height:1.5;
+}
+nav a {
+    text-decoration: none;
+}
+
+nav img {
+    width: auto;
+    max-height: 4rem;
+    margin: 10%;
+    margin-top: 20%;
+}
+
+main > div, main > section {
+    margin-top:10%;
+}
+
+main > div:first-of-type {
+    font-size: 1.65rem;
+}
+
+main > section img{
+    width: auto;
+    max-width: 230%;
+}
+
+.naast {
+    display: flex;
+    justify-content: space-between;
+}
+
+.child {
+    width: 30%;
 }

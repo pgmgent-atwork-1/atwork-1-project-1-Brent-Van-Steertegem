@@ -2,8 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\static",
+    "\\static\\css",
     "\\static\\img"
   ],
-  "SelectedNode": "\\static\\img\\.gitignore",
+  "SelectedNode": "\\static\\img\\art (2)",
   "PreviewInSolutionExplorer": false
 }
