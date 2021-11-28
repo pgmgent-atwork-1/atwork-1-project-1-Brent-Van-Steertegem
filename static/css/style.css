@@ -19,16 +19,17 @@ body {
     font-weight: normal;
     font-style: normal;
     font-size: 1.1rem;
-}
-
-main, header, footer > section, footer > div {
-    width: 85rem;
-    max-width: 100%;
-    margin: 0 auto;
+    margin: 0;
 }
 
 footer {
     border-top: solid 1px lightgray;
+    padding-bottom: 2rem;
+    background: lightgray;
+}
+
+footer > section {
+   background: white 
 }
 
 nav {
@@ -73,8 +74,8 @@ nav a {
     text-decoration: none;
 }
 
-nav img {
-    width: auto;
+nav img, footer > div section img {
+    width: auto !important;
     max-height: 4rem;
     margin: 10%;
     margin-top: 20%;
@@ -120,8 +121,45 @@ footer > section p {
     text-align: center;
 }
 
-footer > div {
-    background: lightgray;
+footer > div section img {
+    margin: auto 0;
+}
+
+input {
+    font-size: 1.5rem;
+    background: dodgerblue;
+    border: 1px solid dodgerblue;
+    border-radius: 3px;
+}
+
+input:first-of-type {
+    background-color: transparent;
+    border-color: darkgray;
+}
+
+footer a {
+    font-size: 1.6rem;
+    text-decoration: none;
+}
+
+footer section p, footer section p a {
+    font-size: 1rem;
+}
+
+body > div a {
+    text-align: center;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding-top: 1rem;
+    background: linear-gradient(transparent, lightgray, lightgray);
+}
+
+.layout-container {
+    width: 85rem;
+    max-width: 95%;
+    margin: 0 auto;
 }
 
 .child {
