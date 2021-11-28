@@ -19,17 +19,25 @@ body {
     font-weight: normal;
     font-style: normal;
     font-size: 1.1rem;
+}
+
+main, header, footer > section, footer > div {
     width: 85rem;
     max-width: 100%;
     margin: 0 auto;
 }
 
 footer {
-
+    border-top: solid 1px lightgray;
 }
 
 nav {
     margin-top: 3%;
+}
+
+section, nav {
+    display: flex;
+    justify-content: space-between;
 }
 
 h1 {
@@ -45,9 +53,9 @@ a {
     color: black;
 }
 
-    a:hover {
-        color: dodgerblue;
-    }
+a:hover {
+    color: dodgerblue;
+}
 
 img {
     height: inherit;
@@ -72,7 +80,7 @@ nav img {
     margin-top: 20%;
 }
 
-main > div, main > section {
+main > div, main > section, footer{
     margin-top:10%;
 }
 
@@ -85,9 +93,35 @@ main > section img{
     max-width: 230%;
 }
 
-.naast {
-    display: flex;
-    justify-content: space-between;
+footer > section .child {
+    width: auto;
+    height: auto;
+    margin: 5% auto 0 auto;
+}
+
+footer > section a {
+    text-decoration:none;
+}
+
+footer > section img {
+    margin: 0 auto;
+    height: 1.75rem;
+    display: block;
+}
+
+footer > section img:hover {
+    /* waarden voor 'dodgerblue' */
+    filter: invert(50%) sepia(98%) saturate(2947%) hue-rotate(191deg) brightness(99%) contrast(104%);
+}
+
+footer > section p {
+    margin-top: 2%;
+    font-size: 1rem;
+    text-align: center;
+}
+
+footer > div {
+    background: lightgray;
 }
 
 .child {
