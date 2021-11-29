@@ -1,6 +1,34 @@
-const setup = () => {
-   
+const loadItem = (art) => {
+    if (document.getElementById("art" + art.year) != null) {
+        document.getElementById("art" + art.year).innerHTML += `
+            <div>
+                <h1>${art.title}</h1>
+            </div>
+        `.trim();
+    } else {
+        document.getElementById("listOfArt").innerHTML += `
+            <div id="art${art.year}">
+                <h1>${art.year}</h1>
+                <div>
+                    <h1>${art.title}</h1>
+                </div>
+            </div>
+        `.trim();
+    }
 }
+
+const setup = () => {
+    /* ARTS.sort((a, b) => {
+        return b.year - a.year;
+    }); */
+    
+    for (art in ARTS) {
+        loadItem(ARTS[art]);
+    }
+    
+}
+
+window.addEventListener("load", setup);
 
 const ARTS = [
     {
@@ -9284,5 +9312,3 @@ const ARTS = [
         highlight: false
     }
 ];
-
-window.addEventListener("load", setup);

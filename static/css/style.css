@@ -43,7 +43,7 @@ section, nav {
 
 h1 {
     font-size: 2.65rem;
-    font-weight: bold;
+    font-weight: normal;
 }
 
 p {
@@ -64,7 +64,7 @@ img {
     width: 100%
 }
 
-nav ul {
+nav ul, section ul {
     list-style-type: none;
     padding: 0;
     font-size: 1.6rem;
@@ -94,7 +94,7 @@ main > section img{
     max-width: 230%;
 }
 
-footer > section .child {
+footer > section .oneThird {
     width: auto;
     height: auto;
     margin: 5% auto 0 auto;
@@ -126,13 +126,22 @@ footer > div section img {
 }
 
 input {
-    font-size: 1.5rem;
-    background: dodgerblue;
-    border: 1px solid dodgerblue;
     border-radius: 3px;
+    border: 1px solid;
 }
 
-input:first-of-type {
+form textarea {
+    width:100%;
+    height:4rem;
+}
+
+footer input {
+    font-size: 1.5rem;
+    background: dodgerblue;
+    border-color:dodgerblue;
+}
+
+footer input:first-of-type {
     background-color: transparent;
     border-color: darkgray;
 }
@@ -156,12 +165,45 @@ body > div a {
     background: linear-gradient(transparent, lightgray, lightgray);
 }
 
+section ul {
+    width: 100%;
+    display:flex;
+}
+
+section ul li {
+    min-width: 20%;
+    margin: 0 auto;
+}
+
 .layout-container {
     width: 85rem;
     max-width: 95%;
     margin: 0 auto;
 }
 
-.child {
+.oneThird {
     width: 30%;
+}
+
+.half {
+    width: 42%;
+    margin: 0 auto;
+}
+
+section > .half {
+    margin: 0;
+    height:fit-content;
+}
+
+.otherWidth {
+    width:100%;
+}
+
+.selectedPage a {
+    color:dodgerblue;
+    text-decoration:underline;
+}
+
+.selectedPage a:hover{
+    text-decoration: none;
 }

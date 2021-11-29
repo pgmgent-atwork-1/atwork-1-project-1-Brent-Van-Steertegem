@@ -1,10 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\static",
-    "\\static\\css",
-    "\\static\\img"
+    "\\art-and-exhibitions",
+    "\\data"
   ],
-  "SelectedNode": "\\static\\img\\art (2)",
+  "SelectedNode": "\\data\\art.js",
   "PreviewInSolutionExplorer": false
 }
