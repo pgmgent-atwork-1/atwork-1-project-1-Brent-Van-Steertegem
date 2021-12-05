@@ -2,7 +2,13 @@
   "ExpandedNodes": [
     "",
     "\\art-and-exhibitions",
-    "\\data"
+    "\\data",
+    "\\fonts",
+    "\\press",
+    "\\press\\detail",
+    "\\static",
+    "\\static\\css",
+    "\\static\\img"
   ],
   "SelectedNode": "\\data\\art.js",
   "PreviewInSolutionExplorer": false

@@ -18,192 +18,442 @@ body {
     font-family: "Mod", Arial, Helvetica, sans-serif;
     font-weight: normal;
     font-style: normal;
-    font-size: 1.1rem;
-    margin: 0;
+    color: black;
+    margin:0;
+    line-height:1.5;
+}
+
+main {
+    padding-top: 1.5rem;
 }
 
 footer {
-    border-top: solid 1px lightgray;
-    padding-bottom: 2rem;
+    border-top: 1px solid lightgray;
     background: lightgray;
 }
 
-footer > section {
-   background: white 
-}
-
-nav {
-    margin-top: 3%;
-}
-
-section, nav {
+nav, main, footer > div, footer > section{
+    width: 85rem;
+    max-width: calc(100% - 2rem);
+    margin: 2rem auto;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media (min-width: 45rem) {
+    nav, main, footer > div, footer > section {
+        max-width: calc(100% - 7rem);
+        margin: 3.5rem auto;
+    }
+}
+
+section {
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1.5rem 0;
     justify-content: space-between;
 }
 
+@media (min-width: 45rem) {
+    section {
+        width: 100%;
+        padding: 3rem 0;
+    }
+}
+
+input {
+    border: 1px solid rgba(0,0,0,0.2);
+    align-items: center;
+    background: none;
+    width:calc(100% - 4.5rem);
+    max-width: 20rem;
+    height: 2.81rem;
+    margin: 0 0.5rem;
+}
+
 h1 {
-    font-size: 2.65rem;
+    font-size: 2.1rem;
+    line-height: 1.2;
+}
+
+h2 {
+    margin: 0 0 1.25rem 0;
+    font-size: 1.75rem;
     font-weight: normal;
 }
 
 p {
-    font-size: 1.75rem;
+    font-size: 1.05rem;
+    line-height: 1.65rem;
+}
+
+ul {
+    margin: 0 auto;
+    list-style-type: none;
+    padding: 0;
+    font-size: 1.4rem;
+    line-height: 1.5;
 }
 
 a {
+    text-decoration: none;
+    border-bottom: 1px solid;
+    font-size: 1.05rem;
     color: black;
+    font-weight: bolder;
 }
 
 a:hover {
-    color: dodgerblue;
+    color: blue;
 }
 
 img {
-    height: inherit;
-    max-height: 155vh;
-    width: 100%
+    width: 4.3rem;
 }
 
-nav ul, section ul {
-    list-style-type: none;
-    padding: 0;
-    font-size: 1.6rem;
-    line-height:1.5;
-}
-nav a {
-    text-decoration: none;
+@media (min-width: 45rem) {
+    img {
+        width: 7.35rem;
+        padding-right: 3.5rem;
+    }
 }
 
-nav img, footer > div section img {
-    width: auto !important;
-    max-height: 4rem;
-    margin: 10%;
-    margin-top: 20%;
+footer img {
+    height: 1.5rem;
 }
 
-main > div, main > section, footer{
-    margin-top:10%;
+@media (min-width: 45rem) {
+    footer img {
+        padding: 0;
+    }
 }
 
-main > div:first-of-type {
-    font-size: 1.65rem;
+nav a, footer a{
+    border: none;
+    font-size: 1.15rem;
 }
 
-main > section img{
-    width: auto;
-    max-width: 230%;
+@media (min-width: 45rem) {
+    nav a {
+        font-size: 1.75rem;
+    }
 }
 
-footer > section .oneThird {
-    width: auto;
-    height: auto;
-    margin: 5% auto 0 auto;
+h2 a {
+    font-size: 1.75rem;
+    font-weight: normal;
 }
 
-footer > section a {
-    text-decoration:none;
+footer p {
+    font-size: 0.88rem;
+    margin: 0;
 }
 
-footer > section img {
+footer > div:first-of-type {
+    background-color: white;
+    max-width: 100%;
+    margin: 0;
+}
+
+footer > div:nth-of-type(2) {
+    padding: 3.75rem 0;
     margin: 0 auto;
-    height: 1.75rem;
     display: block;
 }
 
-footer > section img:hover {
-    /* waarden voor 'dodgerblue' */
-    filter: invert(50%) sepia(98%) saturate(2947%) hue-rotate(191deg) brightness(99%) contrast(104%);
+footer > div:nth-of-type(3) {
+    margin: 0 1rem;
+    display: block;
+    padding-bottom: 3.75rem;
+}
+
+footer > div:nth-of-type(3) * {
+    margin: 0;
+    
+}
+
+footer > div:nth-of-type(3) section {
+    padding-bottom: 0;
+}
+
+footer > div:nth-of-type(3) h2:first-of-type {
+    font-weight: bold;
+}
+
+footer section div, footer > div:nth-of-type(3) a {
+    flex: 0 1 50%;
+    margin: auto 0.62rem;
+    margin-bottom: 1.25rem;
+    width: auto;
+    max-width: calc(50% - 1.25rem);
+    padding: 0;
+}
+
+@media (min-width: 45rem) {
+    footer section div, footer > div:nth-of-type(3) a {
+        max-width: calc(20% - 1.25rem);
+
+    }
+}
+
+footer section div {
+    display: block;
+}
+
+footer > div:nth-of-type(3) a {
+    margin: 0;
+    max-width: calc(50% - 0.5rem);
+}
+
+footer > div:nth-of-type(3) a:nth-of-type(2) {
+    margin-right: 0;
+}
+
+footer > div:nth-of-type(3) a img {
+    width: calc(50vw - 1.5rem);
+    height: calc(50vw - 1.5rem);
+    margin-bottom: 0.5rem;
+}
+
+footer section div:hover {
+    filter: invert(7%) sepia(100%) saturate(7219%) hue-rotate(248deg) brightness(108%) contrast(144%);
+}
+
+footer form input:nth-child(3) {
+    max-width: 6rem;
+    margin: 0 calc(50% - 3rem);
+    margin-top: 0.5rem;
+    background: blue;
+    color: white;
+}
+
+@media (min-width: 45rem) {
+    footer form input:nth-child(3) {
+        margin: 0;
+    }
+}
+
+footer > section {
+    margin: 0 1rem;
+    padding: 0;
+    padding-bottom: 5rem;
 }
 
 footer > section p {
-    margin-top: 2%;
-    font-size: 1rem;
-    text-align: center;
+    font-size: 0.75rem;
+    font-weight: bold;
+    line-height: 1.5;
 }
 
-footer > div section img {
-    margin: auto 0;
+footer > section a {
+    font-size: 0.75rem;
 }
 
-input {
-    border-radius: 3px;
-    border: 1px solid;
-}
-
-form textarea {
-    width:100%;
-    height:4rem;
-}
-
-footer input {
-    font-size: 1.5rem;
-    background: dodgerblue;
-    border-color:dodgerblue;
-}
-
-footer input:first-of-type {
-    background-color: transparent;
-    border-color: darkgray;
-}
-
-footer a {
-    font-size: 1.6rem;
-    text-decoration: none;
-}
-
-footer section p, footer section p a {
-    font-size: 1rem;
-}
-
-body > div a {
-    text-align: center;
+body > div:last-of-type {
     position: fixed;
-    left: 0;
+    width: 100%;
     bottom: 0;
-    width: 100%;
-    padding-top: 1rem;
-    background: linear-gradient(transparent, lightgray, lightgray);
+    padding: 2rem;
+    background: linear-gradient(white, lightgray);
 }
 
-section ul {
-    width: 100%;
-    display:flex;
+body > div:last-of-type a {
+    position: fixed;
+    bottom: 1rem;
+    left: calc(50% - 3.25rem);
+    font-size: 150%;
+    border-bottom: 2px solid;
 }
 
-section ul li {
-    min-width: 20%;
-    margin: 0 auto;
-}
+/*
 
-.layout-container {
-    width: 85rem;
-    max-width: 95%;
-    margin: 0 auto;
-}
+    .layout-container {
+        width: 85rem;
+        max-width: 95%;
+        margin: 0 auto;
+    }
 
-.oneThird {
-    width: 30%;
-}
+    .oneThird {
+        width: 30%;
+    }
 
-.half {
-    width: 42%;
-    margin: 0 auto;
-}
+    nav {
+        margin-top: 3%;
+    }
 
-section > .half {
-    margin: 0;
-    height:fit-content;
-}
+    section, nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
 
-.otherWidth {
-    width:100%;
-}
+        nav ul, section ul {
+            list-style-type: none;
+            padding: 0;
+            font-size: 1.6rem;
+            line-height: 1.5;
+        }
 
-.selectedPage a {
-    color:dodgerblue;
-    text-decoration:underline;
-}
 
-.selectedPage a:hover{
-    text-decoration: none;
-}
+    footer {
+        border-top: solid 1px lightgray;
+        padding-bottom: 2rem;
+        background: lightgray;
+    }
+
+        footer > section {
+            background: white
+        }
+
+    h1 {
+        font-size: 2.65rem;
+        font-weight: normal;
+    }
+
+    p {
+        font-size: 1.75rem;
+    }
+
+    a {
+        color: black;
+    }
+
+        a:hover {
+            color: dodgerblue;
+        }
+
+    img {
+        height: inherit;
+        max-height: 155vh;
+        width: 100%;
+    }
+
+    nav a {
+        text-decoration: none;
+    }
+
+    nav img, footer > div section img {
+        width: auto !important;
+        max-height: 4rem;
+        margin: 10%;
+        margin-top: 20%;
+    }
+
+    main > div, main > section, footer {
+        margin-top: 10%;
+    }
+
+        main > div:first-of-type {
+            font-size: 1.65rem;
+        }
+
+        main > section img {
+            width: auto;
+            max-width: 230%;
+        }
+
+        footer > section .oneThird {
+            width: auto;
+            height: auto;
+            margin: 5% auto 0 auto;
+        }
+
+        footer > section a {
+            text-decoration: none;
+        }
+
+        footer > section img {
+            margin: 0 auto;
+            height: 1.75rem;
+            display: block;
+        }
+
+            footer > section img:hover {
+                /* waarden voor 'dodgerblue' */ /*
+                filter: invert(50%) sepia(98%) saturate(2947%) hue-rotate(191deg) brightness(99%) contrast(104%);
+            }
+
+        footer > section p {
+            margin-top: 2%;
+            font-size: 1rem;
+            text-align: center;
+        }
+
+        footer > div section img {
+            margin: auto 0;
+        }
+
+    input {
+        border-radius: 3px;
+        border: 1px solid;
+    }
+
+    form textarea {
+        width: 100%;
+        height: 4rem;
+    }
+
+    footer input {
+        font-size: 1.5rem;
+        background: dodgerblue;
+        border-color: dodgerblue;
+    }
+
+        footer input:first-of-type {
+            background-color: transparent;
+            border-color: darkgray;
+        }
+
+    footer a {
+        font-size: 1.6rem;
+        text-decoration: none;
+    }
+
+    footer section p, footer section p a {
+        font-size: 1rem;
+    }
+
+    body > div a {
+        text-align: center;
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        padding-top: 1rem;
+        background: linear-gradient(transparent, lightgray, lightgray);
+    }
+
+    section ul {
+        width: 100%;
+        display: flex;
+    }
+
+        section ul li {
+            min-width: 20%;
+            margin: 0 auto;
+        }
+
+    .half {
+        width: 42%;
+        margin: 0 auto;
+    }
+
+    section > .half {
+        margin: 0;
+        height: fit-content;
+    }
+
+    .otherWidth {
+        width: 100%;
+    }
+
+    .selectedPage a {
+        color: dodgerblue;
+        text-decoration: underline;
+    }
+
+        .selectedPage a:hover {
+            text-decoration: none;
+        }
