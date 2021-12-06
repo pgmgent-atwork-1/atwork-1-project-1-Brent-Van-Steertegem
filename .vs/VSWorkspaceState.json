@@ -8,8 +8,9 @@
     "\\press\\detail",
     "\\static",
     "\\static\\css",
-    "\\static\\img"
+    "\\static\\img",
+    "\\static\\img\\index"
   ],
-  "SelectedNode": "\\data\\art.js",
+  "SelectedNode": "\\static\\img\\index",
   "PreviewInSolutionExplorer": false
 }

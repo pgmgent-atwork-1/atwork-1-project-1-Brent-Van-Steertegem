@@ -48,6 +48,12 @@ nav, main, footer > div, footer > section{
     }
 }
 
+@media (min-width: 64rem) {
+    nav, main, footer > div, footer > section {
+        max-width: calc(100% - 12.5rem);
+    }
+}
+
 section {
     text-align: center;
     display: flex;
@@ -67,7 +73,7 @@ input {
     border: 1px solid rgba(0,0,0,0.2);
     align-items: center;
     background: none;
-    width:calc(100% - 4.5rem);
+    width:calc(100% - 4.7rem);
     max-width: 20rem;
     height: 2.81rem;
     margin: 0 0.5rem;
@@ -95,6 +101,16 @@ ul {
     padding: 0;
     font-size: 1.4rem;
     line-height: 1.5;
+}
+
+li {
+    height: 2rem;
+}
+
+@media (min-width: 45rem) {
+    li {
+        height: 2.5rem;
+    }
 }
 
 a {
@@ -169,13 +185,26 @@ footer > div:nth-of-type(3) {
     padding-bottom: 3.75rem;
 }
 
+@media (min-width: 45rem) {
+    footer > div:nth-of-type(3) {
+        display: flex;
+        max-width: calc(100% - 7rem);
+        margin: 0 auto;
+    }
+}
+
 footer > div:nth-of-type(3) * {
     margin: 0;
-    
 }
 
 footer > div:nth-of-type(3) section {
     padding-bottom: 0;
+}
+
+@media (min-width: 45rem) {
+    footer > div:nth-of-type(3) section:last-of-type {
+        margin-left: 6.25rem;
+    }
 }
 
 footer > div:nth-of-type(3) h2:first-of-type {
@@ -191,13 +220,6 @@ footer section div, footer > div:nth-of-type(3) a {
     padding: 0;
 }
 
-@media (min-width: 45rem) {
-    footer section div, footer > div:nth-of-type(3) a {
-        max-width: calc(20% - 1.25rem);
-
-    }
-}
-
 footer section div {
     display: block;
 }
@@ -205,6 +227,12 @@ footer section div {
 footer > div:nth-of-type(3) a {
     margin: 0;
     max-width: calc(50% - 0.5rem);
+}
+
+@media (min-width: 45rem) {
+    footer section div, footer > div:nth-of-type(3) a {
+        max-width: 20%;
+    }
 }
 
 footer > div:nth-of-type(3) a:nth-of-type(2) {
@@ -215,6 +243,15 @@ footer > div:nth-of-type(3) a img {
     width: calc(50vw - 1.5rem);
     height: calc(50vw - 1.5rem);
     margin-bottom: 0.5rem;
+}
+
+@media (min-width: 45rem) {
+    footer > div:nth-of-type(3) a img {
+        width: 4.38rem;
+        height: 4.38rem;
+        margin: 0.13rem;
+        margin-left: 0;
+    }
 }
 
 footer section div:hover {
@@ -241,6 +278,12 @@ footer > section {
     padding-bottom: 5rem;
 }
 
+@media (min-width: 45rem) {
+    footer > section:last-of-type {
+        margin: 0 auto;
+    }
+}
+
 footer > section p {
     font-size: 0.75rem;
     font-weight: bold;
@@ -249,6 +292,12 @@ footer > section p {
 
 footer > section a {
     font-size: 0.75rem;
+}
+
+@media (min-width: 45rem) {
+    footer > section:last-of-type a:hover{
+        border-bottom: 1px solid;
+    }
 }
 
 body > div:last-of-type {

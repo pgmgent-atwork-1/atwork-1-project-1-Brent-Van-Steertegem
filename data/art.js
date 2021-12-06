@@ -1,20 +1,33 @@
 const loadItem = (art) => {
-    if (document.getElementById("art" + art.year) != null) {
-        document.getElementById("art" + art.year).innerHTML += `
-            <div>
-                <h1>${art.title}</h1>
-            </div>
-        `.trim();
-    } else {
+    if (document.getElementById("art" + art.year) == null) {
         document.getElementById("listOfArt").innerHTML += `
-            <div id="art${art.year}">
-                <h1>${art.year}</h1>
-                <div>
-                    <h1>${art.title}</h1>
-                </div>
-            </div>
-        `.trim();
+        <div id="art${art.year}">
+            <h1>${art.year}</h1>
+        </div>
+    `;
     }
+    let tagsInTitle;
+    if (art.tags != null) {
+        tagsInTitle = "test";
+        for (let i = 0; i < art.tags.length; i++) {
+            if (i == 0) {
+                tagsInTitle = art.tags[i];
+            } else {
+                tagsInTitle += ` / ${art.tags[i]}`;
+            }
+        }
+    }
+    
+    document.getElementById("art" + art.year).innerHTML += `
+            <section>
+                <div class="oneThird">
+                    <h1>${art.title}</h1>
+                    <p>${tagsInTitle} — ${art.location}</p>
+                </div>
+                <section class="otherWidth">
+                </section>
+            </section>
+        `;
 }
 
 const setup = () => {
