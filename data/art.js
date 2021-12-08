@@ -1,47 +1,102 @@
-const loadItem = (art) => {
-    if (document.getElementById("art" + art.year) == null) {
-        document.getElementById("listOfArt").innerHTML += `
-        <div id="art${art.year}">
-            <h1>${art.year}</h1>
-        </div>
-    `;
-    }
-    let tagsInTitle;
-    if (art.tags != null) {
-        tagsInTitle = "test";
-        for (let i = 0; i < art.tags.length; i++) {
-            if (i == 0) {
-                tagsInTitle = art.tags[i];
-            } else {
-                tagsInTitle += ` / ${art.tags[i]}`;
+const init = () => {
+    generateHtml();
+};
+
+const generateHtml = (tagFilter, yearFilter) => {
+    let tags = [];
+    for (const artwork of ARTS) {
+        for (tag in artwork.tags) {
+            if (!tags.includes(artwork.tags[tag])) {
+                tags.push(artwork.tags[tag]);
             }
         }
     }
-    
-    document.getElementById("art" + art.year).innerHTML += `
-            <section>
-                <div class="oneThird">
-                    <h1>${art.title}</h1>
-                    <p>${tagsInTitle} — ${art.location}</p>
-                </div>
-                <section class="otherWidth">
-                </section>
-            </section>
-        `;
-}
-
-const setup = () => {
-    /* ARTS.sort((a, b) => {
-        return b.year - a.year;
-    }); */
-    
-    for (art in ARTS) {
-        loadItem(ARTS[art]);
+    let html = `<div>
+        <input type = "button" value = "Show all" onclick = "generateHtml()" />
+`;
+    for (tag in tags) {
+        if (tags[tag] != "") {
+            if (tagFilter == tags[tag]) {
+                html += `<input id="selectedTag" type="button" value="${tags[tag]}" onclick="generateHtml('${tags[tag]}')" />
+`;
+            } else {
+            html += `<input type="button" value="${tags[tag]}" onclick="generateHtml('${tags[tag]}')" />
+`;
+            }
+        }
     }
-    
+    html += `</div>`;
+    let years = [];
+    for (const artwork of ARTS) {
+        if (!years.includes(artwork.year)) {
+            years.push(artwork.year);
+        }
+    }
+    html += `<div>
+        <input type = "button" value = "Show all" onclick = "generateHtml()" />
+`;
+    for (year in years) {
+        if (yearFilter == years[year]) {
+            html += `<input id="selectedYear" type="button" value="${years[year]}" onclick="generateHtml(null, ${years[year]})" />
+`;
+        } else {
+            html += `<input type="button" value="${years[year]}" onclick="generateHtml(null, ${years[year]})" />
+`;
+        }
+    }
+    html += `</div>`;
+    if (tagFilter != null) {
+        tags = [tagFilter];
+    } 
+    if (yearFilter != null) {
+        years = [yearFilter];
+    } 
+    html += years
+        .map((year) => {
+            const artworks = ARTS
+                .filter((artwork) => artwork.year == year)
+                //.filter((artwork) => artwork.tags.includes(tagFilter))
+            .map((artwork) => {
+                let tags = artwork.tags[0];
+                for (let i = 1; i < artwork.tags; i++) {
+                    tags += ` / ${tags[i]}`;
+                }
+                let imgs = "";
+                let imgsSection = "";
+                if (artwork.images != []) {
+                    for (let i = 0; i < artwork.images.length; i++) {
+                        imgs += `<img loading="lazy" src="/static/img/art/${artwork.images[i]}" />
+`;
+                    }
+                    imgsSection = `<section>
+                        ${imgs}
+                    </section>
+`;
+                }
+                return `<li style="height:fit-content">
+                    <section>
+                        <div>
+                            <h1>${artwork.title}</h1>
+                            <p>${tags} — ${artwork.location || "Locatie onbekend"}</p>
+                        </div>
+                        ${imgsSection}
+                    </section>
+                </li>                        
+`;
+            }).join("");
+            return `
+                <div>
+                    <h2>${year}</h2>
+                    <ul>
+                        ${artworks}
+                    </ul>
+                </div>
+`;
+        })
+    document.getElementById("artAndEx").innerHTML = html;
 }
 
-window.addEventListener("load", setup);
+window.addEventListener("load", init);
 
 const ARTS = [
     {
@@ -122,7 +177,6 @@ const ARTS = [
         year: "2021",
         cover: null,
         images: [
-            "66e7af19f2010813128cf6474d7fc014.jpg",
             "65644e1254f0a32cd0b703afd31ac57d.jpg",
             "b4c43ca3873465c96670ecaaf8d6aba7.jpg"
         ],
@@ -4711,8 +4765,8 @@ const ARTS = [
         title: "Satellite 'De Zoeker'",
         subtitle: "Natural Chaos",
         description: null,
-        location: null,
-        tags: ["Atelier, Sint-Martens-Latem, Belgium"],
+        location: "Atelier, Sint-Martens-Latem, Belgium",
+        tags: [],
         year: "2015",
         cover: null,
         images: [
@@ -6530,8 +6584,8 @@ const ARTS = [
         title: "My Secret Garden",
         subtitle: "Exhibition",
         description: null,
-        location: null,
-        tags: ["Kunsthal Rotterdam, the Netherlands"],
+        location: "Kunsthal Rotterdam, the Netherlands",
+        tags: [],
         year: "2012",
         cover: null,
         images: [

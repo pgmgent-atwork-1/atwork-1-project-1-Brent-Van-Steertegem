@@ -1,16 +1,11 @@
 {
   "ExpandedNodes": [
     "",
-    "\\art-and-exhibitions",
     "\\data",
     "\\fonts",
-    "\\press",
-    "\\press\\detail",
     "\\static",
-    "\\static\\css",
-    "\\static\\img",
-    "\\static\\img\\index"
+    "\\static\\css"
   ],
-  "SelectedNode": "\\static\\img\\index",
+  "SelectedNode": "\\static\\css\\biography.css",
   "PreviewInSolutionExplorer": false
 }
