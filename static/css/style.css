@@ -485,193 +485,22 @@ body > div:last-of-type a {
     border-bottom: 3px solid;
 }
 
-/*
-
-    .layout-container {
-        width: 85rem;
-        max-width: 95%;
-        margin: 0 auto;
+@media (min-width: 64rem) {
+    .atelier > div {
+        transform: rotate(-90deg);
+        position: absolute;
+        margin-top: 24rem;
+        margin-left: -8rem;
+        text-align: center;
     }
 
-    .oneThird {
-        width: 30%;
-    }
-
-    nav {
-        margin-top: 3%;
-    }
-
-    section, nav {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-        nav ul, section ul {
-            list-style-type: none;
-            padding: 0;
-            font-size: 1.6rem;
-            line-height: 1.5;
-        }
-
-
-    footer {
-        border-top: solid 1px lightgray;
-        padding-bottom: 2rem;
-        background: lightgray;
-    }
-
-        footer > section {
-            background: white
-        }
-
-    h1 {
-        font-size: 2.65rem;
-        font-weight: normal;
-    }
-
-    p {
+    .atelier > div h1 {
         font-size: 1.75rem;
     }
 
-    a {
-        color: black;
+    .atelier > div a {
+        border: 0;
+        color: blue;
+        font-size: 0.88rem;
     }
-
-        a:hover {
-            color: dodgerblue;
-        }
-
-    img {
-        height: inherit;
-        max-height: 155vh;
-        width: 100%;
-    }
-
-    nav a {
-        text-decoration: none;
-    }
-
-    nav img, footer > div section img {
-        width: auto !important;
-        max-height: 4rem;
-        margin: 10%;
-        margin-top: 20%;
-    }
-
-    main > div, main > section, footer {
-        margin-top: 10%;
-    }
-
-        main > div:first-of-type {
-            font-size: 1.65rem;
-        }
-
-        main > section img {
-            width: auto;
-            max-width: 230%;
-        }
-
-        footer > section .oneThird {
-            width: auto;
-            height: auto;
-            margin: 5% auto 0 auto;
-        }
-
-        footer > section a {
-            text-decoration: none;
-        }
-
-        footer > section img {
-            margin: 0 auto;
-            height: 1.75rem;
-            display: block;
-        }
-
-            footer > section img:hover {
-                /* waarden voor 'dodgerblue' */ /*
-                filter: invert(50%) sepia(98%) saturate(2947%) hue-rotate(191deg) brightness(99%) contrast(104%);
-            }
-
-        footer > section p {
-            margin-top: 2%;
-            font-size: 1rem;
-            text-align: center;
-        }
-
-        footer > div section img {
-            margin: auto 0;
-        }
-
-    input {
-        border-radius: 3px;
-        border: 1px solid;
-    }
-
-    form textarea {
-        width: 100%;
-        height: 4rem;
-    }
-
-    footer input {
-        font-size: 1.5rem;
-        background: dodgerblue;
-        border-color: dodgerblue;
-    }
-
-        footer input:first-of-type {
-            background-color: transparent;
-            border-color: darkgray;
-        }
-
-    footer a {
-        font-size: 1.6rem;
-        text-decoration: none;
-    }
-
-    footer section p, footer section p a {
-        font-size: 1rem;
-    }
-
-    body > div a {
-        text-align: center;
-        position: fixed;
-        left: 0;
-        bottom: 0;
-        width: 100%;
-        padding-top: 1rem;
-        background: linear-gradient(transparent, lightgray, lightgray);
-    }
-
-    section ul {
-        width: 100%;
-        display: flex;
-    }
-
-        section ul li {
-            min-width: 20%;
-            margin: 0 auto;
-        }
-
-    .half {
-        width: 42%;
-        margin: 0 auto;
-    }
-
-    section > .half {
-        margin: 0;
-        height: fit-content;
-    }
-
-    .otherWidth {
-        width: 100%;
-    }
-
-    .selectedPage a {
-        color: dodgerblue;
-        text-decoration: underline;
-    }
-
-        .selectedPage a:hover {
-            text-decoration: none;
-        }
+}

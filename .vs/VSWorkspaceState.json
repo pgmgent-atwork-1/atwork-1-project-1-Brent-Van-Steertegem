@@ -3,9 +3,11 @@
     "",
     "\\data",
     "\\fonts",
+    "\\press",
     "\\static",
-    "\\static\\css"
+    "\\static\\css",
+    "\\static\\js"
   ],
-  "SelectedNode": "\\contact.html",
+  "SelectedNode": "\\data\\art.js",
   "PreviewInSolutionExplorer": false
 }

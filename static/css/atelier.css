@@ -1,31 +1,31 @@
-#atelier h1 {
+.atelier h1 {
     margin-top: -0.25rem;;
 }
-#atelier h2{
+.atelier h2{
     font-size: 1.75rem;
     margin-top: 2.5rem;
 }
 
-#atelier a {
+.atelier a {
     font-size: 1.31rem;
     border-bottom: 2px solid;
 }
 
-#atelier > a {
+.atelier > a {
     border: 0;
     color: blue;
     font-size: 0.88rem;
 }
 
-#atelier > a:hover {
+.atelier > a:hover {
     border-bottom: 1px solid;
 }
 
-#atelier section {
+.atelier section {
     justify-content: space-between;
 }
 
-#atelier section div {
+.atelier section div {
     margin: 0;    
     margin-bottom: 3.75rem;
     padding: 0;
@@ -34,13 +34,13 @@
 }
 
 @media (min-width: 64rem) {
-    #atelier section div {
+    .atelier section div {
         max-width: 30%;
         width: 30%;
     }
 }
 
-#atelier section div img {
+.atelier section div img {
     margin: 0;
     margin-bottom: 2rem;
     padding: 0;
@@ -48,11 +48,11 @@
     width: 100%;
 }
 
-#atelier section div p:first-of-type {
+.atelier section div p:first-of-type {
     color: #787878;
     font-weight: bold;
 }
 
-#atelier section div p:nth-of-type(2) {
+.atelier section div p:nth-of-type(2) {
     font-size: 1.31rem;
 }

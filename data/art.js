@@ -76,7 +76,7 @@ const generateHtml = (tagFilter, yearFilter) => {
                 return `<li style="height:fit-content">
                     <section>
                         <div>
-                            <h1>${artwork.title}</h1>
+                            <a href="detail" ><h1>${artwork.title}</h1></a>
                             <p>${tags} — ${artwork.location || "Locatie onbekend"}</p>
                         </div>
                         ${imgsSection}

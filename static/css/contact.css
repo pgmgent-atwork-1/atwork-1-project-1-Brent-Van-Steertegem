@@ -1,0 +1,61 @@
+#contact > section {
+    max-width: 100%;
+    justify-content: space-between;
+    align-items: normal;
+}
+
+#contact h1 {
+    margin: 0;
+    font-size: 2.1rem;
+}
+
+#contact > section > div {
+    width: 100%;
+    margin: 0;
+}
+
+@media (min-width: 45rem) {
+    #contact > section div {
+        width: 30%;
+        margin: 0;
+    }
+}
+
+@media (min-width: 45rem) {
+    #contact > section form * {
+        width: 100%;
+    }
+}
+
+@media (min-width: 45rem) {
+    #contact > section form > div:nth-last-of-type(2), #contact > section form > div:nth-last-of-type(3), #contact > section form > div:last-of-type {
+        text-align: center;
+    }
+}
+
+#contact section div h2 {
+    font-size: 1.31rem;
+}
+
+#contact input {
+    width:100%;
+    margin: 0;
+    max-width: 100%;
+}
+
+#contact textarea {
+    width: 100%;
+    height: 4rem;
+}
+
+#contact input[type=submit] {
+    background-color: blue;
+    color: white;
+}
+
+@media (min-width: 45rem) {
+    #contact input[type=submit] {
+        width: 5rem;
+        margin: 0 auto;
+    }
+}
